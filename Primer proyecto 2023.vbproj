@@ -1,0 +1,586 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{75ECCE76-3C28-454C-8C30-A323A68134FF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Primer_proyecto_2023.My.MyApplication</StartupObject>
+    <RootNamespace>Primer_proyecto_2023</RootNamespace>
+    <AssemblyName>Primer proyecto 2023</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Primer proyecto 2023.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Primer proyecto 2023.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="GMap.NET.Core">
+      <HintPath>bin\Debug\mapas\GMap.NET.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.WindowsForms">
+      <HintPath>bin\Debug\mapas\GMap.NET.WindowsForms.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>bin\Debug\PDF\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CLASES\CLS_PRODUCTOS.VB" />
+    <Compile Include="CLASES\CLS_USUARIO.VB" />
+    <Compile Include="CLASES\CLS_USUARIOS_PROGRAMA.vb" />
+    <Compile Include="CONSULTA_PRODUCTOS.Designer.vb">
+      <DependentUpon>CONSULTA_PRODUCTOS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CONSULTA_PRODUCTOS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CORREO.Designer.vb">
+      <DependentUpon>CORREO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CORREO.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrystalReport1.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DO_WHILE.Designer.vb">
+      <DependentUpon>DO_WHILE.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DO_WHILE.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EJERCICIO6.Designer.vb">
+      <DependentUpon>EJERCICIO6.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EJERCICIO6.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EJERCICIO1.Designer.vb">
+      <DependentUpon>EJERCICIO1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EJERCICIO1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EJERCICIO2.Designer.vb">
+      <DependentUpon>EJERCICIO2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EJERCICIO2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EJERCICIO3.Designer.vb">
+      <DependentUpon>EJERCICIO3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EJERCICIO3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EJERCICIO4.Designer.vb">
+      <DependentUpon>EJERCICIO4.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EJERCICIO4.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EJERCICIO5.Designer.vb">
+      <DependentUpon>EJERCICIO5.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EJERCICIO5.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EVENTO_MOUSE_MOVE.Designer.vb">
+      <DependentUpon>EVENTO_MOUSE_MOVE.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EVENTO_MOUSE_MOVE.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EXPLORA.Designer.vb">
+      <DependentUpon>EXPLORA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EXPLORA.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EXPORTAR.Designer.VB">
+      <DependentUpon>EXPORTAR.VB</DependentUpon>
+    </Compile>
+    <Compile Include="EXPORTAR.VB">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EXPORTA_PDF.Designer.vb">
+      <DependentUpon>EXPORTA_PDF.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EXPORTA_PDF.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FACTURAS_BOLETAS.Designer.VB">
+      <DependentUpon>FACTURAS_BOLETAS.VB</DependentUpon>
+    </Compile>
+    <Compile Include="FACTURAS_BOLETAS.VB">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_PRUEBA.Designer.vb">
+      <DependentUpon>FORM_PRUEBA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PRUEBA.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_actualiza_precios.Designer.vb">
+      <DependentUpon>frm_actualiza_precios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_actualiza_precios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_PRACTICO_BD.Designer.VB">
+      <DependentUpon>FRM_PRACTICO_BD.VB</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_PRACTICO_BD.VB">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JUEGO.Designer.vb">
+      <DependentUpon>JUEGO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="JUEGO.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LISTBOX.Designer.VB">
+      <DependentUpon>LISTBOX.VB</DependentUpon>
+    </Compile>
+    <Compile Include="LISTBOX.VB">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LISTVIEW.Designer.VB">
+      <DependentUpon>LISTVIEW.VB</DependentUpon>
+    </Compile>
+    <Compile Include="LISTVIEW.VB">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOGIN.Designer.VB">
+      <DependentUpon>LOGIN.VB</DependentUpon>
+    </Compile>
+    <Compile Include="LOGIN.VB">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAESTRO_DETALLE.Designer.VB">
+      <DependentUpon>MAESTRO_DETALLE.VB</DependentUpon>
+    </Compile>
+    <Compile Include="MAESTRO_DETALLE.VB">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAPA.Designer.VB">
+      <DependentUpon>MAPA.VB</DependentUpon>
+    </Compile>
+    <Compile Include="MAPA.VB">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIParent1.Designer.vb">
+      <DependentUpon>MDIParent1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MDIParent1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="conexiones.vb" />
+    <Compile Include="Música.Designer.vb">
+      <DependentUpon>Música.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Música.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NRO ALEATIRIO.Designer.VB">
+      <DependentUpon>NRO ALEATIRIO.VB</DependentUpon>
+    </Compile>
+    <Compile Include="NRO ALEATIRIO.VB">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NUEVO_USUARIO.Designer.vb">
+      <DependentUpon>NUEVO_USUARIO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NUEVO_USUARIO.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRACTICA_FORNEXT.Designer.VB">
+      <DependentUpon>PRACTICA_FORNEXT.VB</DependentUpon>
+    </Compile>
+    <Compile Include="PRACTICA_FORNEXT.VB">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRACTICA_JUEGO.Designer.vb">
+      <DependentUpon>PRACTICA_JUEGO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PRACTICA_JUEGO.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRACTICO_NUEVO_USUARIO.Designer.vb">
+      <DependentUpon>PRACTICO_NUEVO_USUARIO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PRACTICO_NUEVO_USUARIO.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PROGRESSBAR.Designer.VB">
+      <DependentUpon>PROGRESSBAR.VB</DependentUpon>
+    </Compile>
+    <Compile Include="PROGRESSBAR.VB">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="REPORTE_PRODUCTOS.Designer.VB">
+      <DependentUpon>REPORTE_PRODUCTOS.VB</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTE_PRODUCTOS.VB">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SELECT_CASE.Designer.vb">
+      <DependentUpon>SELECT_CASE.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SELECT_CASE.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_EJEMPLO_IF.Designer.VB">
+      <DependentUpon>FRM_EJEMPLO_IF.VB</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_EJEMPLO_IF.VB">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="TAREA.Designer.vb">
+      <DependentUpon>TAREA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TAREA.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TAREA_2_IVA.Designer.vb">
+      <DependentUpon>TAREA_2_IVA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TAREA_2_IVA.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TAREA_LISTVIEW_SUMATORIA.Designer.VB">
+      <DependentUpon>TAREA_LISTVIEW_SUMATORIA.VB</DependentUpon>
+    </Compile>
+    <Compile Include="TAREA_LISTVIEW_SUMATORIA.VB">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TIMER.Designer.vb">
+      <DependentUpon>TIMER.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TIMER.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VALIDACIONES.Designer.VB">
+      <DependentUpon>VALIDACIONES.VB</DependentUpon>
+    </Compile>
+    <Compile Include="VALIDACIONES.VB">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VALIDAR_RUT.Designer.VB">
+      <DependentUpon>VALIDAR_RUT.VB</DependentUpon>
+    </Compile>
+    <Compile Include="VALIDAR_RUT.VB">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VENCIMIENTOS.Designer.VB">
+      <DependentUpon>VENCIMIENTOS.VB</DependentUpon>
+    </Compile>
+    <Compile Include="VENCIMIENTOS.VB">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VISOR DE AGENDA.Designer.VB">
+      <DependentUpon>VISOR DE AGENDA.VB</DependentUpon>
+    </Compile>
+    <Compile Include="VISOR DE AGENDA.VB">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZOOM.Designer.vb">
+      <DependentUpon>ZOOM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ZOOM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CONSULTA_PRODUCTOS.resx">
+      <DependentUpon>CONSULTA_PRODUCTOS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CORREO.resx">
+      <DependentUpon>CORREO.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DO_WHILE.resx">
+      <DependentUpon>DO_WHILE.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EJERCICIO2.resx">
+      <DependentUpon>EJERCICIO2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EJERCICIO3.resx">
+      <DependentUpon>EJERCICIO3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EJERCICIO4.resx">
+      <DependentUpon>EJERCICIO4.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EJERCICIO5.resx">
+      <DependentUpon>EJERCICIO5.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EJERCICIO6.resx">
+      <DependentUpon>EJERCICIO6.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EJERCICIO1.resx">
+      <DependentUpon>EJERCICIO1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EVENTO_MOUSE_MOVE.resx">
+      <DependentUpon>EVENTO_MOUSE_MOVE.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EXPLORA.resx">
+      <DependentUpon>EXPLORA.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EXPORTAR.resx">
+      <DependentUpon>EXPORTAR.VB</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EXPORTA_PDF.resx">
+      <DependentUpon>EXPORTA_PDF.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FACTURAS_BOLETAS.resx">
+      <DependentUpon>FACTURAS_BOLETAS.VB</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PRUEBA.resx">
+      <DependentUpon>FORM_PRUEBA.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_actualiza_precios.resx">
+      <DependentUpon>frm_actualiza_precios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_PRACTICO_BD.resx">
+      <DependentUpon>FRM_PRACTICO_BD.VB</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JUEGO.resx">
+      <DependentUpon>JUEGO.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LISTBOX.resx">
+      <DependentUpon>LISTBOX.VB</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LISTVIEW.resx">
+      <DependentUpon>LISTVIEW.VB</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOGIN.resx">
+      <DependentUpon>LOGIN.VB</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAESTRO_DETALLE.resx">
+      <DependentUpon>MAESTRO_DETALLE.VB</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAPA.resx">
+      <DependentUpon>MAPA.VB</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIParent1.resx">
+      <DependentUpon>MDIParent1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Música.resx">
+      <DependentUpon>Música.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NRO ALEATIRIO.resx">
+      <DependentUpon>NRO ALEATIRIO.VB</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NUEVO_USUARIO.resx">
+      <DependentUpon>NUEVO_USUARIO.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRACTICA_FORNEXT.resx">
+      <DependentUpon>PRACTICA_FORNEXT.VB</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRACTICA_JUEGO.resx">
+      <DependentUpon>PRACTICA_JUEGO.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRACTICO_NUEVO_USUARIO.resx">
+      <DependentUpon>PRACTICO_NUEVO_USUARIO.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PROGRESSBAR.resx">
+      <DependentUpon>PROGRESSBAR.VB</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTE_PRODUCTOS.resx">
+      <DependentUpon>REPORTE_PRODUCTOS.VB</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SELECT_CASE.resx">
+      <DependentUpon>SELECT_CASE.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_EJEMPLO_IF.resx">
+      <DependentUpon>FRM_EJEMPLO_IF.VB</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TAREA.resx">
+      <DependentUpon>TAREA.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TAREA_2_IVA.resx">
+      <DependentUpon>TAREA_2_IVA.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TAREA_LISTVIEW_SUMATORIA.resx">
+      <DependentUpon>TAREA_LISTVIEW_SUMATORIA.VB</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TIMER.resx">
+      <DependentUpon>TIMER.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VALIDACIONES.resx">
+      <DependentUpon>VALIDACIONES.VB</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VALIDAR_RUT.resx">
+      <DependentUpon>VALIDAR_RUT.VB</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VENCIMIENTOS.resx">
+      <DependentUpon>VENCIMIENTOS.VB</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VISOR DE AGENDA.resx">
+      <DependentUpon>VISOR DE AGENDA.VB</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZOOM.resx">
+      <DependentUpon>ZOOM.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\thewindowsclosedtheprogram_theoutput_11873.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\textos\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
